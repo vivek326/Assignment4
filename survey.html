@@ -1,0 +1,278 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+  body {
+    background-color: #9bdbd3;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif 
+  }
+  
+  .formborder {
+    background-color:white;
+    width: 70%;
+    padding: 10px;
+    padding-top: 20px;
+    margin-left: 15%;
+  }
+  
+  .labels {
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+    padding: 5px;
+    vertical-align: top;
+    margin-top: 10px;
+  }
+  
+  .optionalign {
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    vertical-align: middle;
+  }
+  
+  .input-field {
+    height: 20px;
+    width: 280px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+  }
+  
+
+  .improvement,
+  input[type="checkbox"] {
+    float: left;
+    margin-right: 5px;
+  }
+  
+  .submit {
+    background-color: rgb(38, 166, 240);
+    border-radius: 4px;
+    color: white;
+    height: 40px;
+    width: 70px;
+    
+    border: 0px solid;
+  }
+  
+  .dropdown {
+    height: 35px;
+    width: 140px;
+    padding: 5px;
+    margin: 10px;
+    margin-top: 15px;
+    border: 1px solid rgb(146, 144, 144);
+    border-radius: 2px;
+  }
+  
+  .radio, .checkbox {
+    position: relative;
+    left: -10%;
+    margin-left: 10px;
+    display: block;
+    padding-bottom: 10px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+    float: left;
+  }  
+    </style>
+     </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <div class="formborder">
+    
+      
+    <form>
+      
+      <div class="rowalign">
+      <div class="labels">
+      <label id="name-label" for="name">* Name</label>
+      </div>
+      <div class="optionalign">
+      <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+      </div>
+      </div>
+      
+      <div class="rowalign">
+      <div class="labels">
+      <label id="email1" for="email">* Email </label>
+      </div>
+      <div class="optionalign">
+      <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email">
+      </div>
+      </div>
+                           
+      <div class="rowalign">
+      <div class="labels">
+      <label id="Age1" for="age">* Age:</label>
+      </div>
+      <div class="optionalign">
+      <input type="text" name="Age" id="Age" min="1" max="125" class="input-field" placeholder="Age">
+      </div>
+      </div>
+      
+      <div class="rowalign">
+      <div class="labels">
+        <label for="role">Which option best describes your current role?</label>
+      </div>
+      <div class="optionalign" >
+        <select name="role" id="dropdown" class="dropdown">
+          <option disbaled value>Select an option</option>
+          <option value="student">Student</option>
+          <option value="employee">Employee</option>
+          <option value="parttimer">Part Timer</option>
+        </select>
+        </div>
+      </div>
+        
+      
+    <div class="rowalign">
+      <div class="labels">
+      <label for="userRating">* How likely is it that you would recommend Free Code Camp to a friend?</label>
+      </div>  
+      <div class="optionalign">
+        <ul style="list-style: none;">
+          <li class="radio">
+            <label>Definitely<input name="radio-buttons" value="1" type="radio" class="improvement">
+            </label>
+          </li>
+          <li class="radio">
+            <label>Maybe<input name="radio-buttons" value="2" type="radio" class="improvement">
+            </label>
+          </li> 
+          <li class="radio">
+            <label>Not sure<input name="radio-buttons" value="3" type="radio" class="improvement">
+            </label>
+          </li>
+        </ul>  
+      </div>
+                           
+    <div class="rowalign">
+      <div class="labels">
+        <label for="FCC">What do you like most in FCC ?</label>
+      </div>
+      <div class="optionalign"style="padding-bottom: 15px;" >
+        <select style="padding: 5px" id="FCC" name="FCC" class="FCC">
+          <option disabled selected value>Select an Option</option>
+          <option value="codes">Codes</option>
+          <option value="learning">Learning Material</option>
+        </select>
+      </div>
+      </div>
+                           
+    <div class="rowalign">
+      <div class="labels">
+        <label for="preferences">Things that should be improved in the future<br>
+          (Check all that apply): 
+        </label>
+      </div>
+      <div class="optionalign">
+        <ul id="preferences" style="list-style: none; margin-top: 5%">
+          <li class="checkbox">
+            <label>
+              <input name="prefer" value="1" type="checkbox" class="improvement">Front-end Projects
+            </label>
+          </li>
+          <li class="checkbox">
+            <label>
+              <input name="prefer" value="2" type="checkbox" class="improvement">Back-end Projects
+            </label>
+          </li>
+          <li class="checkbox">
+            <label>
+              <input name="prefer" value="3" type="checkbox" class="improvement">Data Visualisation
+            </label>
+          </li>
+          <li class="checkbox">
+            <label>
+              <input name="prefer" value="4" type="checkbox" class="improvement">Challenges
+            </label>
+          </li>
+          <li class="checkbox">
+            <label>
+              <input name="prefer" value="5" type="checkbox" class="improvement">Open source community
+            </label>
+          </li>
+          <li class="checkbox">
+            <label>
+              <input name="prefer" value="6" type="checkbox" class="improvement">Gitter help rooms
+            </label>
+          </li>
+          <li class="checkbox">
+            <label>
+              <input name="prefer" value="7" type="checkbox" class="improvement">Videos
+            </label>
+          </li>
+          <li class="checkbox">
+            <label>
+              <input name="prefer" value="8" type="checkbox" class="improvement">City Meetups
+            </label>
+          </li>
+          <li class="checkbox">
+            <label>
+              <input name="prefer" value="9" type="checkbox" class="improvement">Wiki
+            </label>
+          </li>
+          <li class="checkbox">
+            <label>
+              <input name="prefer" value="10" type="checkbox" class="improvement">Forum
+            </label>
+          </li>
+          <li class="checkbox">
+            <label>
+              <input name="prefer" value="11" type="checkbox" class="improvement">Additional Courses
+            </label>
+          </li>
+        </ul>
+      </div>
+      </div>
+        
+    <div class="rowalign">
+      <div class="labels">
+      <label for="comments">Any comments or suggestions?</label>
+      </div>
+      <div class="optionalign">
+        <textarea name="comment" id="comments" class="input-field" style="height:50px;" placeholder="Enter your comments here..."></textarea>
+      </div>
+      </div>
+        <button class="submit" type="button" onclick="subm()">Submit</button>
+        <button class="submit" type="button" data-toggle="modal" data-target="#exampleModalCenter">View</button>  
+         
+      </form>
+            <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="demo" style="font-size: 15pt;">
+             
+              
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+            <script src="survey1.js">
+                </script>                                      
+     
+  </body>
+</html>
